@@ -25,7 +25,7 @@ public class Course {
     private String courseName;
 
     @ManyToMany(mappedBy = "courses")
-    @JsonIgnoreProperties("courses")//prevent endless loop
+    @JsonIgnoreProperties("courses")
     @Column(name = "student_id")
     private Set<Student> students = new HashSet<>();
 
